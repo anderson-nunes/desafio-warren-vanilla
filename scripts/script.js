@@ -8,7 +8,7 @@ async function buscarTransacoes() {
     return transactions
 
   } catch (error) {
-    console.log(error)
+    alert('Erro em buscar transações')
   }
 }
 
