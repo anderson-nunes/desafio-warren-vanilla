@@ -1,65 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Desafio Warren</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style/style.css">
-  <title>Desafio Warren</title>
-</head>
-
-<body>
-  <header class="header">
+  <body>
+    <header class="header">
+      <div class="container">
+        <img class="logo" src="assets/logo.png" alt="" />
+      </div>
+    </header>
     <div class="container">
-      <img class="logo" src="assets/logo.png" alt="">
+      <div class="action">
+        <form onsubmit="filtroPorTitulo(event)">
+          <input
+            id="search-transaction"
+            class="action__input"
+            type="text"
+            placeholder="Pesquise pelo título"
+          />
+        </form>
+        <select
+          onchange="filtroPorStatus()"
+          class="action__select"
+          name="status"
+          id="status"
+        >
+          <option value="all">Todos</option>
+          <option value="created">Solicitado</option>
+          <option value="processing">Processando</option>
+          <option value="processed">Concluído</option>
+        </select>
+      </div>
+      <table class="table">
+        <tr>
+          <th>Título</th>
+          <th>Descrição</th>
+          <th>status</th>
+          <th>Valor</th>
+        </tr>
+        <tbody class="table__body" id="table-body"></tbody>
+      </table>
     </div>
-  </header>
-  <div class="container">
-    <div class="action">
-      <form onsubmit="filtroPorTitulo(event)">
-        <input id="search-transaction" class="action__input" type="text" placeholder="Pesquise pelo título">
-      </form>
-      <select onchange="filtroPorStatus()" class="action__select" name="status" id="status">
-        <option value="all">Todos</option>
-        <option value="created">Solicitado</option>
-        <option value="processing">Processando</option>
-        <option value="processed">Concluído</option>
-      </select>
-    </div>
-    <table class="table">
-      <tr>
-        <th>Título</th>
-        <th>Descrição</th>
-        <th>status</th>
-        <th>Valor</th>
-      </tr>
-      <tbody class="table__body" id="table-body"></tbody>
-    </table>
-  </div>
-  <div id="modal">
-    <div class="modal-container">
-      <h1 id="titulo"></h1>
-      <div>
-        <h2>Transferindo de</h2>
-        <div class="dados">
-          <p id="from"></p>
-          <p id="from-amount"></p>
+    <div id="modal">
+      <div class="modal-container">
+        <h1 id="titulo"></h1>
+        <div>
+          <h2>Transferindo de</h2>
+          <div class="dados">
+            <p id="from"></p>
+            <p id="from-amount"></p>
+          </div>
+        </div>
+        <div>
+          <h2>Para</h2>
+          <div class="dados">
+            <p id="to"></p>
+            <p id="to-amount"></p>
+          </div>
         </div>
       </div>
-      <div>
-        <h2>Para</h2>
-        <div class="dados">
-          <p id="to"></p>
-          <p id="to-amount"></p>
-        </div>
-      </div>
     </div>
-  </div>
-  <script src="scripts/script.js"></script>
-</body>
-
+    <script src="scripts/script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,25 @@
+{
+  "name": "desafio_warren",
+  "version": "1.0.0",
+  "description": "Este repositório é referente ao desafio para front-end na [Warren](https://github.com/warrenbrasil) para mais detalhes sobre o desafio clique [aqui](https://github.com/warrenbrasil/desafio-warren-web).",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html -p 8080",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anderson-nunes/desafio-warren.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anderson-nunes/desafio-warren/issues"
+  },
+  "homepage": "https://github.com/anderson-nunes/desafio-warren#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "parcel-bundler": "^1.12.5"
+  }
+}
